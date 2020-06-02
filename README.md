@@ -1,3 +1,3 @@
 # website
 
-Abdel hier: design experimente mit dem Rotationsmenü und dem Logo
+Abdels design experimente mit dem Rotationsmenü und dem Logo
