@@ -10,26 +10,52 @@ body
 	height:100%;
 	min-height:1000px;
 	overflow:hidden;
-	font-family: 'quicksandlight', Helvetica, Arial;
+	font-family: 'quicksandlight', Univers, Univers;
 	color:black;
 }
 
+#greenRow {
+with: 100px;
+	height: 60px;
+margin-top: 60px;
+	margin-bottom: 60px;
+background-color: #91b53d;
+}
+
+h2{
+  width: 500px;
+  color: black;
+  background-color: none;
+  border:  0.5px solid black;
+  border-radius: 0 0em 0em 0em;
+  margin:  20px auto;
+  padding: 2em;
+	font-size: 12px;
+	font-family: Times, "Times New Roman", "serif"
+}
 
 h1{
   width: 20%;
   position:absolute;
-  text-align:center;
-	font-size:200px;
-	letter-spacing:-2px;
-  margin-left: 40%;
+  text-align:left;
+	font-size:130px;
+	letter-spacing:-20px;
+  margin-left: 10%; 
+	line-height:80%
 }
 
 h3{
-	
-	font-size:16px;
-	letter-spacing:-1.5px;
-	margin-top:5px;
-	margin-left:35px;
+
+	width: 500px;
+  color: black;
+  background-color: none;
+  border:  0.5px solid black;
+  border-radius: 0 0em 0em 0em;
+  margin:  20px auto;
+  padding: 2em;
+	font-size: 12px;
+	font-family: Times, "Times New Roman", "serif";
+	position: absolute
 }
 
 #fps
@@ -106,7 +132,7 @@ a:hover
 		width:320px;
 		height:130px;
 		position:absolute;
-		background-color:rgba(0, 0, 0);
+		background-color:none
 		border:10px solid rgba(0, 0, 0);
 		color:white;
 		font-size:72px;
@@ -118,3 +144,4 @@ a:hover
 		padding-top:50px;
 		
 	}
+
