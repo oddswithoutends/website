@@ -14,55 +14,250 @@ body
 	overflow:hidden;
 	font-family: 'quicksandlight', Univers, Arial;
 	color:black;
+	margin: auto;
 }
 
+.links::-webkit-scrollbar, .rechts::-webkit-scrollbar, .abouttext::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+.links, .rechts, .abouttext {
+  -ms-overflow-style: none;
+}
+
+h1.titel{
+  width: 40%;
+  text-align:center;
+  font-size:10vw;
+  letter-spacing:-2px;
+  line-height: 0.8;
+  display: block;
+  margin: auto;
+  margin-top: 5%;
+   z-index: -1; 
+
+}
 
 h1{
-  width: 40%;
-  position:absolute;
+	font-size:5vw;
+    letter-spacing:-3px;
+	text-align:center;
+	margin-top: 0px; 
+}
+
+h2{
+  margin-top: 0px;
   text-align:center;
-	font-size:200px;
-	letter-spacing:-2px;
-  line-height: 0.8;
-  margin-left: 30%;
+  font-size: 2vw;
+  margin-top: 5%;
 }
 
 h3{
-	font-size:16px;
-	letter-spacing:-1.5px;
-	margin-top:5px;
-	margin-left:35px;
+	font-size: 1.5vw;
+	text-align:center;
+	font-family: Helvetica;
+
+}
+
+a{
+	color: blue;
 }
 
 p.de{
-	width: 50%;
-	/*margin-top:500px;*/
 	text-align: center;
+	font-size: 2vw;
+	line-height: 1.2;
+	padding: 250px 0px 50px 50px;
+	text-align: left;
 }
 
 p.en{
-	color: red;
-	width: 50%;
-	/*margin-top:500px;*/
-	margin-left:500px;
 	text-align: center;
+	color: grey;
+    font-size: 1.7vw;
+    line-height: 1.2;
+	padding: 0px 0px 200px 50px;
+    text-align: left;
 }
 
-#fps
-{
-	margin-top:5px;
-	margin-left:35px;
+div.head{
+  margin-top: 200px;
 }
 
-a
-{
-	color: black;
-	text-decoration: none;
+.links, .rechts{
+  width: 100%;
+  height:1000px;
+  overflow: scroll;
+  scrollbar-color: white white;
+
+/*	background-color: blue;
+	color: yellow;*/
 }
 
-a:hover
-{
-	color:rgba( 0, 0, 255 );
+.artists:hover{
+	width: 100%;
+	height: 100%;
+	background-color: blue
+}
+
+div.gallery img{
+  padding: 50px;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+video{
+	width: 100%;
+	height: auto;
+	display: block;
+	margin: 50px;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+* {box-sizing: border-box}
+
+ul{
+ width:100%;
+ height:100%;
+ padding: 0px;
+ list-style: none;
+ font-family: univers;
+}
+
+ul li {
+  float: left;
+  width: 100%;
+  height: 100%;
+  text-align:left;
+  color: 
+  z-index: 1; 
+  font-size: 1.3vw;
+}
+
+.abouttext{
+	width: 100%;
+	height: 600px;
+ 	overflow: scroll;
+  	scrollbar-color: yellow yellow;
+
+}
+
+ul li ul.artists li{
+  text-align: center;
+  display: none;
+  line-height: 2.3vw;
+  font-size: 1.3vw;
+}
+
+ul li ul.artists li a{
+ color: yellow;
+ text-align: center;
+}
+
+ul li.about ul li{
+ padding: 50px;
+ color: blue;
+ display: none;
+ font-size: 2vw;
+ line-height: 1.2;
+
+}
+
+ul li ul.about li p{
+ color: yellow;
+ text-align: left;
+
+}
+
+
+ul li:hover ul li{
+ display: block;
+ color: yellow;
+}
+
+ul li:hover, ul li:hover ul li{
+ background-color: blue;
+ color: yellow;
+ width: 100%;
+ height: auto;
+}
+
+ul li.about:hover, ul li.about:hover ul li{
+ background-color: yellow;
+ color: blue;
+
+}
+
+.mySlides{
+	display: block;
+	margin: 50px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin: auto;
+  padding: 50px 50px 50px 0px;
+
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+	color: blue;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
 }
 
 /* hardware accelatator class */	
@@ -81,13 +276,15 @@ a:hover
 		-moz-backface-visibility: hidden;
 		-ms-backface-visibility:hidden;
 		backface-visibility:hidden;*/
+		 z-index: -1; 
+
 	}
 	
 	#contentContainer
 	{
 		position:absolute;
 		margin-left:-500px;
-		margin-top:-500px;
+		margin-top:-650px;
 		left:50%;
 		top:50%;
 		width:1000px;
@@ -108,7 +305,7 @@ a:hover
 	.carouselItem
 	{
 		width:320px;
-		height:130px;
+		height:330px;
 		position:absolute;
 		left:50%;
 		top:50%;
@@ -119,11 +316,11 @@ a:hover
 	
 	.carouselItemInner
 	{
-		width:320px;
-		height:130px;
+		width:350px;
+		height:230px;
 		position:absolute;
 		background-color:rgba(0, 0, 0);
-		border:10px solid rgba(0, 0, 0);
+		border:0px solid rgba(0, 0, 0);
 		color:white;
 		font-size:72px;
 		left:50%;
