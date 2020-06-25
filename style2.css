@@ -1,0 +1,577 @@
+<style>
+/*Style*/ 
+
+
+
+html, body{ background-color:white; }	
+
+body
+{ 
+	touch-action: none; 
+	background-image: url('../images/background.jpg');
+	background-repeat: no-repeat;
+	background-position: top center;
+	width:100vw;
+	background-size:cover;
+	height:100vh;
+	min-height:100vh;
+	overflow:hidden;
+	color: black;
+	background-color: #dee1e5;
+	margin: 0px;
+}
+
+@font-face {
+   font-family: Univers;
+   src: url(UNIVERS-EXTENDED.woff);
+}
+
+* {
+   font-family: Univers;
+}
+
+.links::-webkit-scrollbar, .rechts::-webkit-scrollbar, .abouttext::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+.links, .rechts, .abouttext {
+  -ms-overflow-style: none;
+   scrollbar-width: none;
+}
+
+h1.titel{
+  width: 40%;
+  text-align:center;
+  font-size:10vw;
+  letter-spacing:-2px;
+  line-height: 0.8;
+  display: block;
+  margin: auto;
+  margin-top: 5%;
+   z-index: -1; 
+
+}
+
+div.head{
+	width: 100vw;
+	height: 3vh;
+}
+
+.distance{
+	width: 100%;
+	height: 20vh;
+	display: block;
+}
+
+h1{
+	font-size:5vw;
+    letter-spacing:-3px;
+	text-align:left;
+	margin-left: 25px; 
+	margin-top: 20px; 
+}
+
+h2{
+	text-align:center;
+	font-size: 2vw;
+	margin-top: 5%;
+}
+
+h2#about{
+	text-align:center;
+	width: 40%;
+	height: auto;
+	font-size: 3vw;
+	letter-spacing:-2px;
+  	line-height: 0.8;
+	margin-top: 0px;
+	display: block;
+	margin: auto;
+	margin-bottom: 7vh;
+}
+
+h2.Untertitel{
+	position: fixed;
+	text-align: center;
+	font-size: 1.6vw;
+}
+
+h3{
+	font-size: 1.3vw;
+	text-align: left;
+	font-family: Univers;
+	margin-left: 100px; 
+}
+
+.smalltitel, .smalltitel a{
+	width: 20vw;
+	height: auto;
+	margin: auto;
+	margin-top: -2vw;
+	display: block;
+	font-size: 1.3vw;
+	letter-spacing:-2px;
+  	line-height: 0.9;
+	text-align: center;
+	color: black;
+}
+
+a{
+	color: blue;
+}
+
+h2.link {
+	color: blue;
+	width: 100%;
+	height: auto;
+	font-size: 3vw;
+	line-height: 1;
+    letter-spacing:-3px;
+	text-align: left;
+	padding: 0px 50px;
+	word-break: break-all;
+}
+
+h2.link:hover h2.link{
+	color: blue;
+}
+
+p.groß{
+	color: black;
+    font-size: 2vw;
+    line-height: 1.2;
+	padding: 50px 25px;
+    text-align: left;
+}
+
+p.klein{
+	text-align: left;
+    font-size: 1.3vw;
+    line-height: 1.2;
+	padding: 0px 25px;
+    text-align: left;
+}
+
+.Sprache{
+	color:blue;
+}
+
+/* Caption text */
+.text {
+  color: black;
+  font-size: 1.3vw;
+  line-height: 1.2;
+  position: relative;
+  padding-left: 25px;
+  padding-right: 25px;
+  width: 100%;
+  text-align: left;
+}
+
+.links, .rechts{
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  scrollbar-color: white white;
+}
+
+.artists:hover{
+	width: 100%;
+	height: 100%;
+	background-color: blue
+}
+
+img, video, .mySlides{
+  	padding: 25px;
+  	width: 100%;
+	height: auto;
+	display: block;
+  margin: auto;
+}
+
+.extVid{
+  	width: 100%;
+	height: 66%;
+}
+
+.extVid iframe, .extVid object, .extVid embed{
+  	padding: 25px;
+  	width: 100%;
+	height: 100%;
+	display: block;
+ 	margin: auto;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+* {box-sizing: border-box}
+
+ul, ul li{
+ 	width:100%;
+ 	height:auto;
+ 	list-style: none;
+	font-family: univers;
+   	z-index: 1; 
+  	font-size: 1.3vw;
+  	color: blue;
+}
+
+
+.abouttext{
+	width: 100%;
+	height: 63vh;
+ 	overflow: scroll;
+  	scrollbar-color: blue blue;
+  	text-align: left;
+}
+
+ul li ul.artists li{
+  text-align: center;
+  display: none;
+  line-height: 2.8vw;
+  font-size: 1.3vw;
+}
+
+ul li ul.artists li a{
+ color:  #dee1e5;
+}
+
+ul li.about ul li{
+ padding-bottom: 200px;
+ display: none;
+ font-size: 1.3vw;
+ line-height: 1.2;
+}
+
+ul li:hover ul li{
+ display: block;
+ color:  #dee1e5;
+}
+
+ul li:hover, ul li:hover ul li{
+ background-color: blue;
+ color:  #dee1e5;
+ width: 100%;
+ height: auto;
+}
+
+ul li.about:hover, ul li.about:hover ul li{
+ background-color: blue;
+ color:  #dee1e5;
+
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  margin: auto;
+  margin-top: 25px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: blue;
+  font-weight: bold;
+  font-size: 2vw;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+	color: blue;
+}
+
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+
+div.oddswithoutends {
+  width: 500%;
+  height: 100%;
+  position: relative;	
+}
+
+div.oddswithoutends p {
+  font-size: 8rem;
+  text-align: center;
+}
+
+#carousel_body {
+  position: absolute;
+  height: 90%;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+#carousel_title {
+  font-size: 27rem;
+  display: block;
+  margin: auto;
+  text-align: center;
+  position: absolute;
+  top: -120%;
+  left: -300%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+	font-family: 'quicksandlight', Univers, Univers;
+	letter-spacing: -17px;
+		line-height:210px;
+}
+
+#drag-container,
+#spin-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(-19deg);
+}
+
+#drag-container .item {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: absolute;
+  left: 0;
+  top: 0;
+  /*width: 100%;*/
+  /*height: 100%;*/
+  /*line-height: 200px;*/
+  /*font-size: 50px;*/
+  text-align: center;
+  /*-webkit-box-shadow: 0 0 8px green;
+  box-shadow: 0 0 8px green;
+  -webkit-box-reflect: below 10px
+    linear-gradient(transparent, transparent, #0005);*/
+}
+
+#drag-container img,
+#drag-container video {
+  width: 100%;
+}
+
+#drag-container .item p {
+  color: black;
+}
+
+#drag-container .item img:hover {
+/*  -webkit-box-shadow: 0px 0px 25px #91b53d;
+  box-shadow: 0px 0px 25px #91b53d;
+  -webkit-box-reflect: below 50px
+    linear-gradient(transparent, transparent, #0007);*/
+      width: 120%;
+}
+
+
+#ground {
+  width: 900px;
+  height: 900px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotateX(90deg);
+  transform: translate(-50%, -50%) rotateX(90deg);
+  background: -webkit-radial-gradient(
+    center center,
+    farthest-side,
+    #9993,
+    transparent
+  );
+}
+
+#music-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
+@-webkit-keyframes spinRevert {
+  from {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+  to {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+}
+@keyframes spinRevert {
+  from {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+  to {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+
+html, body{ 
+	background-color:#dee1e5; 
+}	
+
+body
+{ 
+	touch-action: none; 
+	background-image: url('../images/background.jpg');
+	background-repeat: no-repeat;
+	background-position: top center;
+	width:100vw;
+	background-size:cover;
+	height:100vh;
+	min-height:100vh;
+	overflow:scroll;
+	color: black;
+	margin: 0px;
+}
+
+div.head{
+	height: 10vh;
+}
+
+
+.smalltitel, .smalltitel a{
+	width: 30vw;
+	margin-top: 2vw;
+	display: block;
+	font-size: 6vw;
+	letter-spacing:-2px;
+  	line-height: 0.9;
+	text-align: center;
+	color: black;
+}
+
+h1{
+	font-size:12vw;
+}
+
+h2{
+	font-size:12vw;
+}
+
+h3{
+	font-size:6vw;
+	margin-left: 25px; 
+}
+
+h2.link {
+	width: 100%;
+	height: auto;
+	font-size: 9vw;
+	line-height: 1;
+    letter-spacing:-3px;
+	padding: 0px 25px;
+}
+
+p.groß{
+    font-size: 6vw;
+    padding: 25px 25px;
+}
+
+p.klein {
+    font-size: 4vw;
+}
+
+.text {
+    font-size: 4vw;
+	padding: 0px 25px ;
+}
+
+.prev, .next {
+    font-size: 6vw;
+    padding: 6px;
+}
+
+.mySlides{
+	padding: 0px;
+}
+
+#carousel_title {
+	font-size: 9rem;
+  	top: -20%;
+  	left:  -60%;
+  	letter-spacing: -12px;
+	line-height: 0.8;
+}
+
+ul, ul li{
+  	font-size: 6vw;
+  	width: 50%;
+  	text-align: left;
+  	position: absolute;
+  	padding: 12px 10px;
+  	margin: 0vh;
+}
+
+ul li ul.artists li{
+  text-align: center;
+  display: none;
+  line-height: 2.8vw;
+  font-size: 3vw;
+}
+
+ul li.about{
+	width: 50%;
+	margin-left: 70vw; 
+	position: absolute;
+	text-align: right;
+	float: right;
+}
+
+</style>
