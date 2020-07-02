@@ -41,21 +41,20 @@ body
 }
 
 h1.titel{
-  width: 40%;
-  text-align:center;
-  font-size:10vw;
-  letter-spacing:-2px;
-  line-height: 0.8;
-  display: block;
-  margin: auto;
-  margin-top: 5%;
-   z-index: -1; 
-
+ 	width: 40%;
+  	text-align:center;
+  	font-size:10vw;
+  	letter-spacing:-2px;
+  	line-height: 0.8;
+  	display: block;
+  	margin: auto;
+  	margin-top: 5%;
+   	z-index: -1; 
 }
 
 div.head{
 	width: 100vw;
-	height: 3vh;
+	height: 4vh;
 }
 
 .distance{
@@ -91,10 +90,42 @@ h2#about{
 	margin-bottom: 7vh;
 }
 
+h2.group{
+	font-size: 1.3vw;
+ 	line-height: 1.2;
+}
+
 h2.Untertitel{
 	position: fixed;
-	text-align: center;
+	text-align: center;	
 	font-size: 1.6vw;
+	font-family: Univers;
+	z-index: -10;
+}
+
+h2#a{
+	margin: 10% 0% 0px 0px; 
+	padding-left: 5%; 
+	width: 25%
+}
+
+h2#b{
+	margin-left: 75%; 
+	margin-top: 10%; 
+	width: 17%; 
+	letter-spacing:-2px;
+}
+
+h2#c{
+	margin-top: 30%; 
+	margin-left: -5%; 
+	width: 40%;
+}
+
+h2#d{
+	margin-top: 30%; 
+	margin-left: 68%; 
+	width: 30%;
 }
 
 h3{
@@ -108,8 +139,11 @@ h3{
 	width: 20vw;
 	height: auto;
 	margin: auto;
-	margin-top: -2vw;
-	display: block;
+	margin-top: 0.5vh;
+	margin-left: 15vw;
+	display: inline-block;
+	position: fixed;
+
 	font-size: 1.3vw;
 	letter-spacing:-2px;
   	line-height: 0.9;
@@ -176,12 +210,6 @@ p.klein{
   scrollbar-color: white white;
 }
 
-.artists:hover{
-	width: 100%;
-	height: 100%;
-	background-color: blue
-}
-
 img, video, .mySlides{
   	padding: 25px;
   	width: 100%;
@@ -209,59 +237,100 @@ img, video, .mySlides{
 
 * {box-sizing: border-box}
 
-ul, ul li{
+button{
+	text-decoration: none;
+	border: none;
+  	outline: none;
+  	display: inline;
+  	background-color: #dee1e5;
+ 	color: blue ; 
+ 	font-size: 1.3vw;
+ 	padding: 0px 10px;
+}
+
+button#about{
+	text-align: left;
+	font-size: 1.3vw;
+ 	display: inline; 	
+ 	margin-left: 94vw;
+ 	margin-top: -4vh;
+ 	position: fixed;
+}
+
+button#artists{
+	text-align: left;
+ 	display: inline; 
+ 	margin-left: 0vw;
+ 	position: fixed;
+}
+
+ul{
+  	width:100%;
+ 	height:100vh;
+   	display: none;	
+	background-color: blue;
+ 	margin-top: 0vh;
+
+}
+
+ul li{
  	width:100%;
  	height:auto;
  	list-style: none;
 	font-family: univers;
-   	z-index: 1; 
+ 	color:  #dee1e5; 
+ 	text-align: center;
+  	line-height: 2.8vw;
   	font-size: 1.3vw;
-  	color: blue;
+	background-color: blue;
+
 }
 
+ul li a{
+	color: #dee1e5;
+}
+
+.artists{
+	width: 50vw;
+}
+
+.about{
+	width: 50vw;
+}
+
+.artists:hover ul {
+	display: block;
+}
+
+.artists:hover button#artists, .about:hover button#about{
+	background-color: blue;
+ 	color:  #dee1e5; 
+}
 
 .abouttext{
-	width: 100%;
+	width: 97%;
 	height: 63vh;
  	overflow: scroll;
   	scrollbar-color: blue blue;
   	text-align: left;
+  	padding-bottom: 25px;
 }
 
-ul li ul.artists li{
-  text-align: center;
-  display: none;
-  line-height: 2.8vw;
-  font-size: 1.3vw;
+.content {
+ 	margin-left: 50vw;
+ 	margin-top: -4vh;
+ 	width: 102%;
+	height: 100vh;
+ 	display: none;
+ 	font-size: 1.3vw;
+ 	line-height: 1.2;
+ 	background-color: blue;
+ 	color:  #dee1e5;
+ 	padding: 25px;
 }
 
-ul li ul.artists li a{
- color:  #dee1e5;
-}
-
-ul li.about ul li{
- padding-bottom: 200px;
- display: none;
- font-size: 1.3vw;
- line-height: 1.2;
-}
-
-ul li:hover ul li{
- display: block;
- color:  #dee1e5;
-}
-
-ul li:hover, ul li:hover ul li{
- background-color: blue;
- color:  #dee1e5;
- width: 100%;
- height: auto;
-}
-
-ul li.about:hover, ul li.about:hover ul li{
- background-color: blue;
- color:  #dee1e5;
-
+.about:hover .content{
+	display: inline-block;
 }
 
 /* Slideshow container */
@@ -320,7 +389,7 @@ div.oddswithoutends p {
 
 #carousel_body {
   position: absolute;
-  height: 90%;
+  height: 100%;
   width: 100%;
   display: flex;
   overflow: hidden;
@@ -396,11 +465,11 @@ div.oddswithoutends p {
 
 
 #ground {
-  width: 900px;
-  height: 900px;
+  width: 100vw;
+  height: 100vh;
   position: absolute;
   top: 100%;
-  left: 50%;
+  left: 100%;
   -webkit-transform: translate(-50%, -50%) rotateX(90deg);
   transform: translate(-50%, -50%) rotateX(90deg);
   background: -webkit-radial-gradient(
@@ -482,19 +551,27 @@ body
 }
 
 div.head{
-	height: 10vh;
+	height: 13vh;
+	width: 100vw;
+	background-color: #dee1e5; 
+	z-index: 10;
+	position: fixed;
 }
 
 
 .smalltitel, .smalltitel a{
 	width: 30vw;
-	margin-top: 2vw;
-	display: block;
+	margin-top: 0.5vh;
+	margin-left: 10vw;	
+	display: inline-block;
+	background-color: #dee1e5; 
 	font-size: 6vw;
 	letter-spacing:-2px;
   	line-height: 0.9;
 	text-align: center;
 	color: black;
+	z-index: 1;
+	top: 0;
 }
 
 h1{
@@ -503,6 +580,59 @@ h1{
 
 h2{
 	font-size:12vw;
+}
+
+h2.Untertitel{
+	font-size:4vw;
+	position: relative;
+	font-family: Univers;
+}
+
+h2#a{
+	width: 50vw;
+	text-align: center;
+	display: block;
+	margin: auto; 
+	margin-top: 10vh; 
+	margin-bottom: -13vh;
+	font-family: Univers;
+	z-index: 10;	
+}
+
+h2#b{
+	width: 70vw;
+	display: block;
+	margin: auto; 
+	position: absolute;
+	margin-top: 75vh;
+	margin-bottom: 5vh;
+	margin-left: 15vw;
+	letter-spacing:0px;
+	font-family: Univers;
+	z-index: -10;
+}
+
+h2#c{
+	width: 100vw;
+	display: block;
+	margin: auto; 
+	position: absolute;
+	margin-top: 93vh;
+	font-family: Univers;
+	text-align: left;
+	margin-left: 5vw;
+}
+
+h2#d{
+	width: 100vw;	
+	display: block;
+	margin: auto; 
+	position: absolute;
+	margin-top: 93vh;
+	font-family: Univers;
+	text-align: left;
+	margin-left: 60vw;
+
 }
 
 h3{
@@ -517,6 +647,10 @@ h2.link {
 	line-height: 1;
     letter-spacing:-3px;
 	padding: 0px 25px;
+}
+
+h2#group{
+	font-size: 6vw;
 }
 
 p.groß{
@@ -550,28 +684,71 @@ p.klein {
 	line-height: 0.8;
 }
 
-ul, ul li{
-  	font-size: 6vw;
-  	width: 50%;
-  	text-align: left;
-  	position: absolute;
-  	padding: 12px 10px;
-  	margin: 0vh;
+button#artists{
+	font-size: 6vw;
+	z-index: 20;
+	display: inline-block;
+	position: fixed;
+	top: 0;
 }
 
-ul li ul.artists li{
-  text-align: center;
-  display: none;
-  line-height: 2.8vw;
-  font-size: 3vw;
+.artists:hover button#artists, .about:hover button#about{
+	background-color:#dee1e5; 
+	color: blue;
 }
 
-ul li.about{
-	width: 50%;
-	margin-left: 70vw; 
+.artists:hover{
+	width: 100%;
+	height: 100%;
+	background-color: #dee1e5;
+}
+
+button#about{
+	font-size: 6vw;
+	margin-top: 0vh;
+	margin-left: 73vw;
+	z-index: 10;	
+	display: inline-block;
+	position: fixed;
+	top: 0;
+
+}
+
+ul{
+	width: 100%;
+	height: auto;
+	margin-top: 14vh;
 	position: absolute;
-	text-align: right;
-	float: right;
+	z-index: 10;	
+
+}
+
+ul li{
+	width: 100%;
+	height: auto;
+  	margin: auto;
+  	line-height: 6vw;
+  	font-size: 4.5vw;
+  	margin-left: -7vw;
+  	padding: 0px 0px 15px 25px;
+}
+
+h2#about{
+	display: none;
+}
+
+.content {
+	margin-left: 0vw;
+	margin-top: 10vh;
+	width: 100vw;
+
+}
+
+.abouttext{
+	width: 100%;
+	height: 66vh;
+	font-size: 4vw;
+
 }
 
 </style>
