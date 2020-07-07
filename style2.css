@@ -21,9 +21,9 @@ body
 	margin: 0px;
 }
 
-body#landing
+body.landing
 { 
-	background-image:radial-gradient(30vw 50vh,#86b817,rgba(0,0,0,0));;
+	background-image:radial-gradient(60vw 50vh,#86b817,rgba(0,0,0,0));;
 }
 
 @font-face {
@@ -272,14 +272,10 @@ button#artists{
  	position: fixed;
 }
 
-.flex-container {
-  display: none;
-}
-
 ul{
-  	width:50%;
+  	width:50vw;
  	height:100vh;
-   	display: inline-block;	
+   	display: none;	
 	background-color: blue;
  	padding-top: 7vh;
  	padding-left: 25px;
@@ -287,8 +283,9 @@ ul{
 }
 
 ul li{
- 	width:100%;
+ 	width:49%;
  	height:auto;
+ 	display: inline-block;
  	list-style: none;
 	font-family: univers;
  	color:  #dee1e5; 
@@ -296,7 +293,11 @@ ul li{
   	line-height: 1.2;
   	margin-bottom: 1vw;
   	font-size: 1.3vw;
-	background-color: blue;
+  	padding: 0px 25px 25px 0px;
+}
+
+.work{
+	padding-left: 25px;
 }
 
 ul li a, ul li a:hover{
@@ -313,8 +314,8 @@ ul li a, ul li a:hover{
 	z-index: 10;	
 }
 
-.artists:hover .flex-container {
-	display: flex;
+.artists:hover ul {
+	display: inline-block;
 }
 
 .artists:hover button#artists, .about:hover button#about{
@@ -429,7 +430,7 @@ div.oddswithoutends p {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 	font-family: 'quicksandlight', Univers, Univers;
-	letter-spacing: -17px;
+	letter-spacing: -1.2vw;
 		line-height:210px;
 }
 
@@ -457,7 +458,7 @@ div.oddswithoutends p {
 
 #drag-container img,
 #drag-container video {
-  width: 100%;
+  width: 120%;
 }
 
 #drag-container .item p {
@@ -557,16 +558,27 @@ body
 	margin: 0px;
 }
 
-body#landing{ 
-	background-image:radial-gradient(50vw 30vh,#86b817,rgba(0,0,0,0));;
+body.landing{ 
+	background-image:radial-gradient(50vw 50vh,#86b817,rgba(0,0,0,0));
+}
+
+#carousel_title {
+	letter-spacing: 1.2vw;
+}
+
+div.head1{
+	height: 11vh;
+	width: 100vw;
+	z-index: 0;
+	position: fixed;
 }
 
 div.head{
 	height: 11vh;
 	width: 100vw;
-	background-color: #dee1e5; 
 	z-index: 10;
 	position: fixed;
+	background-color:#dee1e5; 
 }
 
 
@@ -709,9 +721,7 @@ button#artists{
 }
 
 .artists:hover{
-	width: 100%;
-	height: 100%;
-	background-color: #dee1e5;
+	display: block;
 }
 
 button#about{
@@ -725,19 +735,14 @@ button#about{
 
 }
 
-.flexcontainer ul{
+ul{
 	width: 100vw;
 	height: auto;
-	display: block;
-	padding-top: 14vh;
+	display: none;
+	position: relative;
+	margin-top: 10vh;
 	z-index: 10;	
 	overflow: scroll;
-}
-
-.flexcontainer{
-	display: flex;
-  flex-direction: column;
-
 }
 
 ul li{
