@@ -167,16 +167,17 @@ h2.link {
 	color: blue;
 	width: 100%;
 	height: auto;
+
 	font-size: 3vw;
 	line-height: 1;
     letter-spacing:-3px;
 	text-align: left;
-	padding: 0px 50px;
+	padding: 0px 25px;
 	word-break: break-all;
 }
 
 h2.link:hover h2.link{
-	color: blue;
+	color: green;
 }
 
 p.groß{
@@ -192,6 +193,21 @@ p.klein{
     font-size: 1.3vw;
     line-height: 1.2;
 	padding: 0px 25px;
+    text-align: left;
+}
+
+.tags{
+	padding: 25px;
+	color: blue;
+    font-size: 2vw;
+    line-height: 1.2;
+} 
+
+.tags p{
+	color: blue;
+	display: inline;
+    font-size: 2vw;
+    line-height: 1.2;
     text-align: left;
 }
 
@@ -456,21 +472,92 @@ div.oddswithoutends p {
   text-align: center;
 }
 
+.preisbox {
+	width: 30%;
+	height: 30;
+	position: fixed;
+	bottom: 32%;
+	right: 11%; 
+    padding: 2%;
+	padding-right: 4%;
+
+    background: #86b817;
+    color: #FFFFFF;
+    font-size: 70%;
+    font-family: Arial, "bold";
+
+}
+
+#drag-container .item{
+	width: 110%;
+	height: auto;
+}
+
+div.kachel_schrift {
+	width: 70%;
+	height: 100%;
+	padding-top: 60%;
+	padding-left: 4%;
+    padding-bottom: 2%;
+	margin-top: -70%;
+	margin-left: 15%;
+    background: #FFFFFF;
+ 	box-shadow: 0px 0px 60px #86b817;
+
+}
+
+div.kachel_schrift p{
+	font-family: Arial;	
+  	text-align: left;
+   	line-height: 0.3;
+   	color: #000000;
+   	font-size: 62%;
+}
+
+p.titel{
+  font-weight: bold;
+  margin-bottom: 9%;
+}
+
 #drag-container img,
 #drag-container video {
-  width: 120%;
+
 }
 
 #drag-container .item p {
-  color: black;
+	color: black;
+  	text-decoration-line: none;
 }
 
-#drag-container .item img:hover {
+#drag-container .item a{
+
+}
+
+#drag-container .item:hover {
     width: 140%;
   	margin-left: -2vw;
-  	margin-top: -3vh;       
+  	margin-top: -1vh;     
 }
 
+#drag-container .item:hover .kachel_schrift {
+    width: 76%;
+    height: 110%;
+	padding-top: 65%;    
+  	margin-left: 12%;
+  	margin-top: -72%;     
+  	text-decoration-line: none;  
+}
+
+#drag-container .item:hover p{
+	font-size: 80%;
+	text-decoration-line: none;
+}
+
+#drag-container .item:hover .preisbox{
+	right: 7%; 
+    font-size: 80%;
+
+}
 
 #ground {
   width: 100vw;
@@ -654,7 +741,7 @@ h2#d{
 	margin-top: 93vh;
 	font-family: Univers;
 	text-align: left;
-	margin-left: 60vw;
+	margin-left: 63vw;
 
 }
 
