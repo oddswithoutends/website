@@ -647,7 +647,7 @@ body
 }
 
 body.landing{ 
-	background-image:radial-gradient(50vw 50vh,#86b817,rgba(0,0,0,0));
+	background-image:radial-gradient(50vw 35vh,#86b817,rgba(0,0,0,0));
 }
 
 #carousel_title {
@@ -858,7 +858,9 @@ h2#about{
 	width: 100%;
 	height: auto;
 	font-size: 4vw;
+}	
 
+div.kachel_schrift {
+ 	box-shadow: 0px 0px 40px #86b817;
 }
-
 </style>
