@@ -27,19 +27,22 @@ body.landing
 }
 
 .preisbox_gross {
-   padding-right: 1.25%;
+	position: relative; 	
+	margin-left: 80%;
+	top: 2%;
+	width: 18%;
+	height: auto;	
 	padding-left: 1%;
-   background: #86b817;
+   background-color: #86b817;
    color: #FFFFFF;
    font-size: 2vw;
    font-family: “Arial Bold”, sans-serif; 
-	z-index: 10;
-	margin-left: 80%;
-	width: 18%;
-	height: auto;
+  transform: rotate(10deg);
+    z-index: 10;
+ 
 }
 
-
+/*
 .triangle-up-left {
   width: 2vw;
   height: 2vw;
@@ -47,7 +50,7 @@ body.landing
   border-right: 20px solid transparent;
 	margin-left: 93.5%;
 	z-index: 10
-}
+}*/
 
 @font-face {
    font-family: Univers;
@@ -94,7 +97,8 @@ div.head{
 
 h1{
 	font-size:5vw;
-  	line-height: 1;		
+	width: 100%;
+  	line-height: 0.8;		
     letter-spacing:-3px;
 	text-align:left;
 	margin-left: 25px; 
@@ -191,6 +195,7 @@ h2.link {
 	color: blue;
 	width: 100%;
 	height: auto;
+	margin-top: -1vh;
 
 	font-size: 3vw;
 	line-height: 1;
